@@ -33,7 +33,7 @@ function currentGrade(){
     var letter= findLetter(findCurrent);
 
     if (totalWeight<0||totalWeight>100){
-        document.getElementById("error").innerHTML="The weight must be a positive number less than 100, please enter correct values";
+        document.getElementById("error").innerHTML="The weight must equal a positive number less than 100, please enter correct values";
     }else{
         document.getElementById("calculate").innerHTML="Your current grade is: "+ currentRound+"%";
         document.getElementById("letterGrade").innerHTML="That is an unweighted "+letter+"!";
