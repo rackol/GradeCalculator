@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="GradeCalculator.js"></script>
+    <link rel="stylesheet" href="GradeCalculator.css">
+    <title>W3.CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body>
+<h1>Grade Calculator</h1>
+<table>
+    <tr>
+        <td>Homework Points</td>
+        <td>Homework Weight</td>
+    </tr>
+    <tr>
+        <td><input type="text" id="hw" value="98,95,95"></td>
+        <td><input type="text" id="hwWeight" value="15"></td>
+    </tr>
+    <tr>
+        <td>Classwork Points</td>
+        <td>Classwork Weight</td>
+    </tr>
+    <tr>
+        <td><input type="text" id="cw" value="90,98,95"></td>
+        <td><input type="text" id="cwWeight" value="20"></td>
+    </tr>
+    <tr>
+        <td>Assessment Points</td>
+        <td>Assessment Weight</td>
+    </tr>
+    <tr>
+        <td><input type="text" id="as" value="92,95,85"></td>
+        <td><input type="text" id="asWeight" value="15"></td>
+    </tr>
+    <tr>
+        <td>Participation Points</td>
+        <td>Participation Weight</td>
+    </tr>
+    <tr>
+        <td><input type="text" id="pa" value="99,95,90"></td>
+        <td><input type="text" id="paWeight" value="20"></td>
+    </tr>
+    <tr>
+        <td>Other Points</td>
+        <td>Other Weight</td>
+    </tr>
+    <tr>
+        <td><input type="text" id="other" value="95,95,90"></td>
+        <td><input type="text" id="otherWeight" value="15"></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <div class="w3-container">
+            <td><p><button id="currentGrade" onclick="currentGrade()" class="w3-button w3-hover-red w3-round-large w3-border w3-border-black">Find My Current Grade!</button></p></td>
+        </div>
+    <tr>
+        <td><div id="calculate"></div></td>
+    </tr>
+    <tr>
+        <td><div id="letterGrade"></div></td>
+    </tr>
+    <tr>
+        <td><div id="error"></div></td>
+    </tr>
+
+</table>
+<h1>What Do I need on the Final?</h1>
+<table>
+    <tr>
+        <td>Current Grade</td>
+        <td>What I want</td>
+        <td>Weight of Final</td>
+    </tr>
+    <tr>
+        <td><input type="text" id="myCurrentGrade" value="85"></td>
+        <td><input type="text" id="finalWant" value="90"></td>
+        <td><input type="text" id="finalWeight" value="15"></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <div class="w3-container">
+            <td><p><button id="finalneeded" onclick="final()" class="w3-button w3-hover-red w3-round-large w3-border w3-border-black">Calculate!</button></p></td>
+        </div>
+    </tr>
+    <tr>
+        <td><div id="myFinalWant"></div></td>
+    </tr>
+    <tr>
+        <td><div id="myFinalNeed"></div></td>
+    </tr>
+    <tr>
+        <td><div id="luck"></div></td>
+    </tr>
+    <tr>
+        <td><div id="error2"></div></td>
+    </tr>
+</table>
+<br><br>
+
+</body>
+</html>

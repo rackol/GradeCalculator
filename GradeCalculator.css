@@ -1,0 +1,19 @@
+body{
+    background-color: darkseagreen;
+
+}
+
+table{
+    font-family: "Times New Roman";
+    font-size: 20px;
+    color: firebrick;
+    text-align: center;
+    margin: auto;
+}
+
+h1{
+    font-family: "Times New Roman";
+    font-size: 30px;
+    color: maroon;
+    text-align: center;
+}
