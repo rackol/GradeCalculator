@@ -9,6 +9,8 @@ table{
     color: firebrick;
     text-align: center;
     margin: auto;
+    position: relative;
+    top: auto;
 }
 
 h1{
