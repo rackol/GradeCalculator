@@ -13,11 +13,11 @@ function currentGrade(){
     var paAverage=calculate(pa);
     var otherAverage=calculate(other);
 
-    var hwWeight=change("hwWeight");
-    var cwWeight=change("cwWeight");
-    var asWeight=change("asWeight");
-    var paWeight=change("paWeight");
-    var otherWeight=change("otherWeight");
+    var hwWeight=changeWeight("hwWeight");
+    var cwWeight=changeWeight("cwWeight");
+    var asWeight=changeWeight("asWeight");
+    var paWeight=changeWeight("paWeight");
+    var otherWeight=changeWeight("otherWeight");
 
     var totalWeight=hwWeight+cwWeight+asWeight+paWeight+otherWeight;
 
@@ -26,6 +26,12 @@ function currentGrade(){
     var asTotal = calculateWeight(asAverage, "asWeight",totalWeight);
     var paTotal = calculateWeight(paAverage, "paWeight",totalWeight);
     var otherTotal = calculateWeight(otherAverage, "otherWeight",totalWeight);
+
+    var hwWeight=("hwWeight");
+    var cwWeight=("cwWeight");
+    var asWeight=("asWeight");
+    var paWeight=("paWeight");
+    var otherWeight=("otherWeight");
 
     var findCurrent = hwTotal+cwTotal+asTotal+paTotal+otherTotal;
     var currentRound= (findCurrent).toFixed(2);
@@ -37,9 +43,67 @@ function currentGrade(){
     }else{
         document.getElementById("calculate").innerHTML="Your current grade is: "+ currentRound+"%";
         document.getElementById("letterGrade").innerHTML="That is an unweighted "+letter+"!";
+
+        if(hwAverage>=90){
+            document.getElementById("hw").style.background="forestgreen";
+        }if(hwAverage>=80&&hwAverage<90){
+            document.getElementById("hw").style.background="steelblue";
+        }if(hwAverage>=70&&hwAverage<80){
+            document.getElementById("hw").style.background="gold";
+        }if(hwAverage>=60&&hwAverage<70){
+            document.getElementById("hw").style.background="orange";
+        }if(hwAverage<60){
+            document.getElementById("hw").style.background="red";
+        }
+
+        if(cwAverage>=90){
+            document.getElementById("cw").style.background="forestgreen";
+        }if(cwAverage>=80&&cwAverage<90){
+            document.getElementById("cw").style.background="steelblue";
+        }if(cwAverage>=70&&cwAverage<80){
+            document.getElementById("cw").style.background="gold";
+        }if(cwAverage>=60&&cwAverage<70){
+            document.getElementById("cw").style.background="orange";
+        }if(cwAverage<60){
+            document.getElementById("cw").style.background="red";
+        }
+
+        if(asAverage>=90){
+            document.getElementById("as").style.background="forestgreen";
+        }if(asAverage>=80&&asAverage<90){
+            document.getElementById("as").style.background="steelblue";
+        }if(asAverage>=70&&asAverage<80){
+            document.getElementById("as").style.background="gold";
+        }if(asAverage>=60&&asAverage<70){
+            document.getElementById("as").style.background="orange";
+        }if(asAverage<60){
+            document.getElementById("as").style.background="red";
+        }
+
+        if(paAverage>=90){
+            document.getElementById("pa").style.background="forestgreen";
+        }if(paAverage>=80&&paAverage<90){
+            document.getElementById("pa").style.background="steelblue";
+        }if(paAverage>=70&&paAverage<80){
+            document.getElementById("pa").style.background="gold";
+        }if(paAverage>=60&&paAverage<70){
+            document.getElementById("pa").style.background="orange";
+        }if(paAverage<60){
+            document.getElementById("pa").style.background="red";
+        }
+
+        if(otherAverage>=90){
+            document.getElementById("other").style.background="forestgreen";
+        }if(otherAverage>=80&&otherAverage<90){
+            document.getElementById("other").style.background="steelblue";
+        }if(otherAverage>=70&&otherAverage<80){
+            document.getElementById("other").style.background="gold";
+        }if(otherAverage>=60&&otherAverage<70){
+            document.getElementById("other").style.background="orange";
+        }if(otherAverage<60){
+            document.getElementById("other").style.background="red";
+        }
     }
-
-
 }
 
 function final(){
@@ -100,7 +164,7 @@ function findLetter(value){
     return answer;
 }
 
-function change(value){
+function changeWeight(value){
     var num=document.getElementById(value).value;
     return parseInt(num);
 }
